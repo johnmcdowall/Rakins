@@ -1,4 +1,4 @@
-=RAKINS
+#RAKINS
 
                    ,,,, 
                  .'     `/\_/\
@@ -9,7 +9,7 @@
 
 Rakins is a silly wrapper around gem and bundle exec. 
 
-==Usage
+##Usage
 
   rakins install <gem> will install a gem
   rakins <command> will bundle exec a command
