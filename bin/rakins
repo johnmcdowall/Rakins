@@ -5,39 +5,6 @@
 # http://www.youtube.com/watch?v=QHQ7bt5LBj8
 # Enjoy!
 
-first_arg = ARGV[0]
-second_arg = ARGV[1]
+require 'rakin'
 
-angry_rakin_phrases = ["GONNA RAKE THINGS UP! BRR!", 
-                       "WHY YOU GOTTA CALL UP A RAKIN FO' NUTHIN?",
-                       "RAKINS GONNA GETCHA!",
-                       "STEALIN YO' STUFF!"]
-
-def make_rakin_say message
-    rakin = <<-EOF
-                   ,,,, 
-                 .'     `/\\_/\\
-                '        <@V@>     /===#{ '=' * (message.length+2) }
-     <((((((((((  )    (  \\./   <==   #{message}  =
-                \\(''''''\\(\\(       \\===#{ '=' * (message.length+2) }
-                 `-"`-"  " "
-    EOF
-
-  rakin
-end
-
-if !first_arg.nil? && first_arg=='install'
-  puts make_rakin_say "INSTALLIN' #{second_arg}, YO."
-  puts `gem install #{second_arg}`
-elsif !first_arg.nil? && first_arg=='help'
-  puts "rakins install <gem> will install a gem, rakins <command> will bundle exec the command."
-elsif !first_arg.nil? && first_arg=='origin'
-  `open http://www.youtube.com/watch?v=QHQ7bt5LBj8`
-elsif !first_arg.nil? && second_arg.nil?
-  puts make_rakin_say "EXECIN' #{first_arg}, YO."
-  puts `bundle exec #{first_arg}`
-elsif first_arg.nil?
-  puts make_rakin_say angry_rakin_phrases[ rand(angry_rakin_phrases.length)]
-end
-
-
+Rakin.consider_events
