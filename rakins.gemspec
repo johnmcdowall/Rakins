@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'rakins'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = '2011-09-14'
   s.summary     = "Bring the power of Rakins to your command line!"
   s.description = "Rakins! Enjoy them."
