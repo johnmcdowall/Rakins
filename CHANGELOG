@@ -1,0 +1,15 @@
+= v0.0.2
+
+. Some refactoring into a Rakins class
+. You can now rakins <command> <command2> and it will bundle exec <command>
+<command2>
+
+  So you can say rakins rake spec! 
+
+= v0.0.1
+The inaugural rakins. you can:
+
+  - rakins install <gem-name> and it will execute gem install
+	- rakins <command> and it will bundle exec <command>
+
+
