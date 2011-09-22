@@ -35,7 +35,7 @@ class Rakin
       system "open", "http://www.youtube.com/watch?v=QHQ7bt5LBj8"
     elsif !first_arg.nil? && !second_arg.nil?
       puts Rakin.speaks "EXECIN' #{first_arg}, YO."
-      system "bundle", "exec", first_arg, second_arg
+      system "bundle", "exec", *ARGV
     elsif first_arg.nil?
       puts Rakin.talks_back
     end
